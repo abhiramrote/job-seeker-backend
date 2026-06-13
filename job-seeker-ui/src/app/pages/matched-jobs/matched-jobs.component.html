@@ -1,0 +1,31 @@
+<div class="page">
+  <header class="header">
+    <div>
+      <p class="eyebrow">Matched Jobs</p>
+      <h1>Opportunities for You</h1>
+    </div>
+
+    <a routerLink="/" class="back">Back to dashboard</a>
+  </header>
+
+  <p *ngIf="loading">Loading jobs...</p>
+  <p class="error" *ngIf="error">{{ error }}</p>
+
+  <section class="grid">
+    <article class="job-card" *ngFor="let job of jobs">
+      <div class="top">
+        <span class="score">{{ job.matchScore }}</span>
+        <span class="source">{{ job.source }}</span>
+      </div>
+
+      <h2>{{ job.title }}</h2>
+
+      <p class="company">{{ job.company }}</p>
+      <p class="location">{{ job.location }}</p>
+
+      <a [href]="job.jobUrl" target="_blank" rel="noopener noreferrer">
+        Open job
+      </a>
+    </article>
+  </section>
+</div>

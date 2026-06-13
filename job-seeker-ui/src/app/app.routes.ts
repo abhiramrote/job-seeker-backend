@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { JobDetailComponent } from './components/job-detail/job-detail.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { MatchedJobsComponent } from './pages/matched-jobs/matched-jobs.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'job/:id', component: JobDetailComponent },
+  { path: '', component: DashboardComponent },
+  { path: 'matched-jobs', component: MatchedJobsComponent },
   { path: '**', redirectTo: '' }
 ];

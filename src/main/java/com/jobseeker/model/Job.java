@@ -6,11 +6,7 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "jobs", indexes = {
-        @Index(name = "idx_job_url", columnList = "jobUrl", unique = true),
-        @Index(name = "idx_company", columnList = "company"),
-        @Index(name = "idx_experience_level", columnList = "experienceLevel")
-})
+@Table(name = "jobs")
 @Data
 @Builder
 @NoArgsConstructor
@@ -21,36 +17,30 @@ public class Job {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(columnDefinition = "TEXT")
     private String title;
 
-    @Column(nullable = false)
+    @Column(columnDefinition = "TEXT")
     private String company;
 
+    @Column(columnDefinition = "TEXT")
     private String location;
 
+    @Column(columnDefinition = "TEXT")
     private String experienceLevel;
-
-    @Column(nullable = false, unique = true, length = 1024)
-    private String jobUrl;
 
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    private String source; // e.g., GREENHOUSE, LEVER, WORKDAY
+    @Column(columnDefinition = "TEXT", unique = true)
+    private String jobUrl;
 
-    private Double matchScore;
+    @Column(columnDefinition = "TEXT")
+    private String source;
 
-    @Column(nullable = false)
+    private Boolean active;
+
     private LocalDateTime scrapedAt;
 
-    @Builder.Default
-    private boolean active = true;
-
-    @PrePersist
-    protected void onCreate() {
-        if (scrapedAt == null) {
-            scrapedAt = LocalDateTime.now();
-        }
-    }
+    private Double matchScore;
 }

@@ -1,0 +1,206 @@
+name,tier,category,platform,slug,career_url
+Google,1,Global Product / Big Tech,CAREERS_PAGE,,https://careers.google.com/jobs/results/
+Microsoft,1,Global Product / Big Tech,CAREERS_PAGE,,https://jobs.careers.microsoft.com/global/en/search
+Amazon,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.amazon.jobs/en/search
+Apple,1,Global Product / Big Tech,CAREERS_PAGE,,https://jobs.apple.com/
+Meta,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.metacareers.com/jobs/
+Netflix,1,Global Product / Big Tech,CAREERS_PAGE,,https://jobs.netflix.com/
+LinkedIn,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.linkedin.com/jobs/
+Adobe,1,Global Product / Big Tech,CAREERS_PAGE,,https://careers.adobe.com/us/en/search-results
+Salesforce,1,Global Product / Big Tech,CAREERS_PAGE,,https://careers.salesforce.com/en/jobs/
+ServiceNow,1,Global Product / Big Tech,CAREERS_PAGE,,https://careers.servicenow.com/jobs/
+Oracle,1,Global Product / Big Tech,CAREERS_PAGE,,https://careers.oracle.com/jobs/
+Cisco,1,Global Product / Big Tech,CAREERS_PAGE,,https://jobs.cisco.com/jobs/SearchJobs/
+SAP,1,Global Product / Big Tech,CAREERS_PAGE,,https://jobs.sap.com/
+IBM,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.ibm.com/careers/search
+Intel,1,Global Product / Big Tech,CAREERS_PAGE,,https://jobs.intel.com/
+NVIDIA,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.nvidia.com/en-us/about-nvidia/careers/
+Qualcomm,1,Global Product / Big Tech,CAREERS_PAGE,,https://careers.qualcomm.com/careers
+AMD,1,Global Product / Big Tech,CAREERS_PAGE,,https://careers.amd.com/
+Broadcom,1,Global Product / Big Tech,CAREERS_PAGE,,https://jobs.broadcom.com/
+VMware,1,Global Product / Big Tech,CAREERS_PAGE,,https://jobs.broadcom.com/
+Atlassian,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.atlassian.com/company/careers/all-jobs
+Uber,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.uber.com/us/en/careers/list/
+Airbnb,1,Global Product / Big Tech,CAREERS_PAGE,,https://careers.airbnb.com/
+Dropbox,1,Global Product / Big Tech,CAREERS_PAGE,,https://jobs.dropbox.com/
+Box,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.box.com/careers
+Zoom,1,Global Product / Big Tech,CAREERS_PAGE,,https://careers.zoom.us/
+Slack,1,Global Product / Big Tech,CAREERS_PAGE,,https://slack.com/intl/en-in/careers
+GitHub,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.github.careers/careers-home/
+GitLab,1,Global Product / Big Tech,CAREERS_PAGE,,https://about.gitlab.com/jobs/
+Cloudflare,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.cloudflare.com/careers/jobs/
+Akamai,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.akamai.com/careers
+Red Hat,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.redhat.com/en/jobs
+Elastic,1,Global Product / Big Tech,CAREERS_PAGE,,https://boards.greenhouse.io/elastic
+MongoDB,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.mongodb.com/careers/jobs
+Confluent,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.confluent.io/careers/
+Datadog,1,Global Product / Big Tech,CAREERS_PAGE,,https://boards.greenhouse.io/datadog
+Snowflake,1,Global Product / Big Tech,CAREERS_PAGE,,https://boards.greenhouse.io/snowflakecomputing
+Palantir,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.palantir.com/careers/
+Twilio,1,Global Product / Big Tech,CAREERS_PAGE,,https://boards.greenhouse.io/twilio
+Stripe,1,Global Product / Big Tech,CAREERS_PAGE,,https://stripe.com/jobs/search
+Intuit,1,Global Product / Big Tech,CAREERS_PAGE,,https://jobs.intuit.com/search-jobs
+PayPal,1,Global Product / Big Tech,CAREERS_PAGE,,https://careers.pypl.com/home/
+Square / Block,1,Global Product / Big Tech,CAREERS_PAGE,,https://block.xyz/careers/jobs
+Shopify,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.shopify.com/careers
+Roblox,1,Global Product / Big Tech,CAREERS_PAGE,,https://careers.roblox.com/jobs
+Electronic Arts,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.ea.com/careers
+Autodesk,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.autodesk.com/careers/job-search
+Workday,1,Global Product / Big Tech,CAREERS_PAGE,,https://workday.wd5.myworkdayjobs.com/Workday
+Okta,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.okta.com/company/careers/
+Splunk,1,Global Product / Big Tech,CAREERS_PAGE,,https://www.splunk.com/en_us/careers/search-jobs.html
+JPMorgan Chase,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://careers.jpmorgan.com/global/en/home
+Goldman Sachs,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.goldmansachs.com/careers
+Morgan Stanley,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.morganstanley.com/about-us/careers
+American Express,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://aexp.eightfold.ai/careers
+Visa,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://corporate.visa.com/en/jobs.html
+Mastercard,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://careers.mastercard.com/us/en/search-results
+Fiserv,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.careers.fiserv.com/
+Fidelity,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://jobs.fidelity.com/
+BlackRock,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://careers.blackrock.com/
+BNY Mellon,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://jobs.bny.com/
+Wells Fargo,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.wellsfargojobs.com/
+Capital One,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.capitalonecareers.com/
+Bloomberg,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.bloomberg.com/company/careers/working-here/
+FactSet,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.factset.com/careers
+Thomson Reuters,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.thomsonreuters.com/en/careers.html
+Nasdaq,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.nasdaq.com/about/careers
+DTCC,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.dtcc.com/careers
+Coinbase,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.coinbase.com/careers
+Robinhood,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://careers.robinhood.com/
+Plaid,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://plaid.com/careers/
+Brex,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.brex.com/careers
+Ramp,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://ramp.com/careers
+Affirm,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.affirm.com/careers
+Wise,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://wise.jobs/
+Revolut,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.revolut.com/careers/
+Adyen,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://careers.adyen.com/
+Razorpay,2,FinTech / Enterprise Finance,GREENHOUSE,razorpaysoftwareprivatelimited,https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited
+PhonePe,2,FinTech / Enterprise Finance,GREENHOUSE,phonepe,https://job-boards.greenhouse.io/phonepe
+CRED,2,FinTech / Enterprise Finance,LEVER,cred,https://jobs.lever.co/cred
+Groww,2,FinTech / Enterprise Finance,GREENHOUSE,groww,https://groww.in/about-us/careers
+Zerodha,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://zerodha.com/careers/
+Upstox,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://upstox.com/careers/
+CoinSwitch,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://coinswitch.co/careers/
+Navi,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://navi.com/careers
+Juspay,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://juspay.io/careers
+Paytm,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://paytm.com/careers/
+Pine Labs,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.pinelabs.com/careers
+MobiKwik,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.mobikwik.com/careers
+Jar,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://www.myjar.app/careers
+Fi Money,2,FinTech / Enterprise Finance,CAREERS_PAGE,,https://fi.money/careers
+Flipkart,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.flipkartcareers.com/
+Myntra,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.myntra.com/careers
+Meesho,3,India Product / SaaS / Consumer,LEVER,meesho,https://jobs.lever.co/meesho
+Swiggy,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://careers.swiggy.com/
+Zomato,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.zomato.com/careers
+Dream11,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://careers.dreamsports.group/
+Dream Sports,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://careers.dreamsports.group/
+Gameskraft,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.gameskraft.com/careers
+MPL,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.mpl.live/careers
+Ola,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.olacabs.com/careers
+Ola Electric,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://olaelectric.com/careers
+Ather Energy,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.atherenergy.com/careers
+Urban Company,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.urbancompany.com/careers
+NoBroker,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.nobroker.in/careers
+Lenskart,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.lenskart.com/careers
+Nykaa,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.nykaa.com/careers
+Tata Neu,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.tatadigital.com/careers
+Jio Platforms,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://careers.jio.com/
+Disney+ Hotstar,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://careers.hotstar.com/
+ShareChat,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://sharechat.com/careers
+Dailyhunt / VerSe,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.verse.in/careers
+InMobi,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.inmobi.com/company/careers
+Glance,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://glance.com/careers
+Zoho,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.zoho.com/careers/jobdetails/
+Freshworks,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.freshworks.com/company/careers/
+Postman,3,India Product / SaaS / Consumer,GREENHOUSE,postman,https://boards.greenhouse.io/postman
+BrowserStack,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.browserstack.com/careers/jobs
+Chargebee,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.chargebee.com/careers/
+Druva,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.druva.com/about/careers/
+Icertis,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.icertis.com/company/careers/
+Whatfix,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://whatfix.com/careers/
+Tekion,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://tekion.com/careers/
+Observe.AI,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.observe.ai/careers
+Innovaccer,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://innovaccer.com/careers
+MindTickle,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.mindtickle.com/careers/
+LambdaTest,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.lambdatest.com/career
+Hasura,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://hasura.io/careers/
+Zeta,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.zeta.tech/careers/
+Setu,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://setu.co/careers
+Khatabook,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://khatabook.com/careers
+Open Financial Technologies,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://open.money/careers
+Cashfree Payments,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.cashfree.com/careers/
+Smallcase,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.smallcase.com/careers
+ClearTax,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://cleartax.in/careers
+KreditBee,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.kreditbee.in/careers
+Slice,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.sliceit.com/careers
+Simpl,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://getsimpl.com/careers
+Fampay,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://www.famapp.in/careers
+SuperMoney,3,India Product / SaaS / Consumer,CAREERS_PAGE,,https://super.money/careers
+OpenAI,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://openai.com/careers/
+Anthropic,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.anthropic.com/careers
+Cohere,4,Cloud / AI / DevTools / Security,LEVER,cohere,https://jobs.lever.co/cohere
+Mistral AI,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://mistral.ai/careers/
+Perplexity AI,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.perplexity.ai/careers
+Anysphere / Cursor,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.cursor.com/careers
+Glean,4,Cloud / AI / DevTools / Security,GREENHOUSE,gleanwork,https://job-boards.greenhouse.io/gleanwork
+Scale AI,4,Cloud / AI / DevTools / Security,GREENHOUSE,scaleai,https://job-boards.greenhouse.io/scaleai
+Weights & Biases,4,Cloud / AI / DevTools / Security,LEVER,wandb,https://jobs.lever.co/wandb
+Pinecone,4,Cloud / AI / DevTools / Security,LEVER,pinecone,https://jobs.lever.co/pinecone
+LangChain,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.langchain.com/careers
+Hugging Face,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://apply.workable.com/huggingface/
+Databricks,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.databricks.com/company/careers/open-positions
+Redis,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://redis.io/careers/
+Cockroach Labs,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.cockroachlabs.com/careers/
+PlanetScale,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://planetscale.com/careers
+Supabase,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://supabase.com/careers
+Vercel,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://vercel.com/careers
+Netlify,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.netlify.com/careers/
+Render,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://render.com/careers
+Railway,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://railway.com/careers
+Temporal,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://temporal.io/careers
+Tailscale,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://tailscale.com/careers
+HashiCorp,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.hashicorp.com/careers
+Snyk,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://snyk.io/careers/
+Wiz,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.wiz.io/careers
+CrowdStrike,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.crowdstrike.com/careers/
+Palo Alto Networks,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://jobs.paloaltonetworks.com/
+Zscaler,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.zscaler.com/careers
+SentinelOne,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.sentinelone.com/careers/
+Auth0,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.okta.com/company/careers/
+1Password,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://1password.com/careers
+Sentry,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://sentry.io/careers/
+Grafana Labs,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://grafana.com/about/careers/
+New Relic,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://newrelic.com/about/careers
+PagerDuty,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://careers.pagerduty.com/
+CircleCI,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://circleci.com/careers/
+Docker,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.docker.com/careers/
+Kong,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://konghq.com/careers
+PostHog,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://posthog.com/careers
+Linear,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://linear.app/careers
+Notion,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.notion.com/careers
+Airtable,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.airtable.com/careers
+Asana,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://asana.com/jobs
+Figma,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.figma.com/careers/
+Canva,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.canva.com/careers/
+Miro,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://miro.com/careers/
+Grammarly,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.grammarly.com/jobs
+Duolingo,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://careers.duolingo.com/
+Khan Academy,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.khanacademy.org/careers
+Coursera,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://about.coursera.org/careers
+Udemy,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://about.udemy.com/careers/
+Pluralsight,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.pluralsight.com/careers
+Notion Labs,4,Cloud / AI / DevTools / Security,CAREERS_PAGE,,https://www.notion.com/careers
+HubSpot,4,Additional Product Targets,CAREERS_PAGE,,https://www.hubspot.com/careers
+Zendesk,4,Additional Product Targets,CAREERS_PAGE,,https://www.zendesk.com/company/careers/
+Intercom,4,Additional Product Targets,CAREERS_PAGE,,https://www.intercom.com/careers
+Freshpaint,4,Additional Product Targets,CAREERS_PAGE,,https://www.freshpaint.io/careers
+Amplitude,4,Additional Product Targets,CAREERS_PAGE,,https://amplitude.com/careers
+Mixpanel,4,Additional Product Targets,CAREERS_PAGE,,https://mixpanel.com/careers/
+Segment,4,Additional Product Targets,CAREERS_PAGE,,https://www.twilio.com/en-us/company/jobs
+Braze,4,Additional Product Targets,CAREERS_PAGE,,https://www.braze.com/careers
+Iterable,4,Additional Product Targets,CAREERS_PAGE,,https://iterable.com/careers/
+Klaviyo,4,Additional Product Targets,CAREERS_PAGE,,https://www.klaviyo.com/careers
+ServiceTitan,4,Additional Product Targets,CAREERS_PAGE,,https://www.servicetitan.com/careers
+Rippling,4,Additional Product Targets,CAREERS_PAGE,,https://www.rippling.com/careers

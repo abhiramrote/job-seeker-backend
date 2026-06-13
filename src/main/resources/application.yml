@@ -1,17 +1,18 @@
-# ============================================================
-# Job Seeker Backend - Application Configuration
-# ============================================================
-
 server:
   port: 8080
-
-# ---- Database Configuration ----
+app:
+  public-url: https://improved-space-succotash-9r7qqvwr69whpjvx-8080.app.github.dev
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/jobseeker_db
     username: postgres
-    password: your_password_here
+    password: postgres123
     driver-class-name: org.postgresql.Driver
+  devtools:
+    restart:
+      enabled: false
+    livereload:
+      enabled: false
 
   jpa:
     hibernate:
@@ -22,12 +23,11 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
-  # ---- Email Configuration ----
   mail:
     host: smtp.gmail.com
     port: 587
-    username: your_email@gmail.com
-    password: your_app_password_here
+    username: dummy@gmail.com
+    password: dummy
     properties:
       mail:
         smtp:
@@ -35,38 +35,117 @@ spring:
           starttls:
             enable: true
 
-# ---- Azure OpenAI Configuration ----
+profile:
+  name: Abhiram Rote
+  phone: "+917286951917"
+  email: abhiramrote@gmail.com
+  min-experience: 1
+  max-experience: 3
+
+  skills:
+    - java
+    - spring boot
+    - spring
+    - python
+    - flask
+    - fastapi
+    - rest api
+    - microservices
+    - jpa
+    - hibernate
+    - mysql
+    - sql
+    - javascript
+    - react
+    - git
+    - maven
+    - llm
+    - rag
+    - genai
+    - ai
+    - openai
+    - gpt
+    - chromadb
+    - vector database
+    - docker
+    - kafka
+    - redis
+
+  target-roles:
+    - software engineer
+    - backend engineer
+    - java developer
+    - backend developer
+    - sde
+    - software developer
+    - full stack
+    - application developer
+    - platform engineer
+    - api developer
+    - ai engineer
+    - ml engineer
+    - genai
+
+  locations:
+    - hyderabad
+    - bangalore
+    - bengaluru
+    - pune
+    - mumbai
+    - remote
+    - india
+    - work from home
+
+  keywords:
+    - java
+    - spring boot
+    - backend
+    - microservices
+    - rest api
+    - python
+
+twilio:
+  enabled: ${TWILIO_ENABLED:false}
+  account-sid: ${TWILIO_ACCOUNT_SID:}
+  auth-token: ${TWILIO_AUTH_TOKEN:}
+  from-whatsapp: ${TWILIO_FROM_WHATSAPP:}
+  to-whatsapp: ${TWILIO_TO_WHATSAPP:}
+
+
 azure:
   openai:
     endpoint: https://your-resource.openai.azure.com
-    api-key: your_azure_openai_api_key_here
+    api-key: your_key_here
     deployment-name: gpt-4o
     api-version: 2024-02-01
 
-# ---- Scraper Configuration ----
-# Add company slugs for each portal you want to scrape
 scraper:
   target-companies:
     greenhouse:
-      - airbnb
-      - spotify
       - figma
-      - notion
+      - airbnb
+      - razorpay
+      - freshworks
+      - browserstack
+      - postman
+      - datadog
+      - snowflakecomputing
     lever:
-      - netflix
+      - spotify
       - databricks
-      - coinbase
+      - cohere
+      - pinecone
     workday: []
 
-# ---- Logging ----
 logging:
   level:
-    com.jobseeker: INFO
+    com.jobseeker: DEBUG
+    com.jobseeker.scraper: INFO
     org.hibernate.SQL: WARN
 
-# ---- Swagger / OpenAPI ----
 springdoc:
   api-docs:
     path: /api-docs
   swagger-ui:
     path: /swagger-ui.html
+

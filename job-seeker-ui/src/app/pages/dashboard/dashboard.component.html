@@ -1,0 +1,85 @@
+<div class="page">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Personal Job Search CRM</p>
+      <h1>Job Seeker Dashboard</h1>
+      <p class="subtitle">
+        Run priority scraping, review matched jobs, and track companies from one modern dashboard.
+      </p>
+    </div>
+
+    <a routerLink="/matched-jobs" class="link-button">View all matched jobs</a>
+  </header>
+
+  <section class="actions">
+    <button (click)="runPriorityScrape()" [disabled]="loading">
+      {{ loading ? 'Running...' : 'Run Priority Scrape' }}
+    </button>
+
+    <button class="secondary" (click)="runFullScrape()" [disabled]="loading">
+      Run Full Scrape
+    </button>
+  </section>
+
+  <p class="error" *ngIf="error">{{ error }}</p>
+
+  <section class="stats" *ngIf="summary">
+    <div class="card">
+      <span>Priority / Total Companies</span>
+      <strong>{{ summary.priorityCompanies || summary.totalCompanies || 0 }}</strong>
+    </div>
+
+    <div class="card">
+      <span>Total Scraped</span>
+      <strong>{{ summary.totalScraped }}</strong>
+    </div>
+
+    <div class="card">
+      <span>Matched Jobs</span>
+      <strong>{{ summary.matchedJobs }}</strong>
+    </div>
+
+    <div class="card">
+      <span>WhatsApp Jobs</span>
+      <strong>{{ summary.whatsappJobs }}</strong>
+    </div>
+  </section>
+
+  <section class="panel" *ngIf="matchedJobRows.length">
+    <h2>Latest Priority Matches</h2>
+
+    <div class="jobs-preview">
+      <article class="mini-job" *ngFor="let job of matchedJobRows">
+        <div class="mini-top">
+          <strong>{{ job.matchScore }}</strong>
+          <span>{{ job.source }}</span>
+        </div>
+        <h3>{{ job.title }}</h3>
+        <p>{{ job.company }} • {{ job.location }}</p>
+        <a [href]="job.jobUrl" target="_blank" rel="noopener noreferrer">Open job</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" *ngIf="companyRows.length">
+    <h2>Company Results</h2>
+
+    <div class="table">
+      <div class="row header">
+        <span>Company</span>
+        <span>Platform</span>
+        <span>Scraped</span>
+        <span>Matched</span>
+        <span>Status</span>
+      </div>
+
+      <div class="row" *ngFor="let c of companyRows">
+        <span>{{ c.name }}</span>
+        <span>{{ c.platform }}</span>
+        <span>{{ c.scraped }}</span>
+        <span>{{ c.matched }}</span>
+        <span>{{ c.status }}</span>
+      </div>
+    </div>
+  </section>
+</div>

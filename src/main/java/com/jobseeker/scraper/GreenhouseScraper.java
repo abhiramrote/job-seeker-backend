@@ -1,15 +1,17 @@
 package com.jobseeker.scraper;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jobseeker.dto.FilterRequestDTO;
 import com.jobseeker.model.Job;
 import lombok.extern.slf4j.Slf4j;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +20,11 @@ import java.util.List;
 @Component
 public class GreenhouseScraper extends BaseScraper {
 
-    private static final String BASE_URL = "https://boards.greenhouse.io/";
+    private static final String API_URL = "https://boards-api.greenhouse.io/v1/boards/%s/jobs?content=true";
     private static final String SOURCE = "GREENHOUSE";
+
+    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final HttpClient httpClient = HttpClient.newHttpClient();
 
     @Override
     public String getSourceName() {
@@ -28,77 +33,85 @@ public class GreenhouseScraper extends BaseScraper {
 
     @Override
     public List<Job> scrape(String companySlug, FilterRequestDTO filters) {
-        String url = BASE_URL + companySlug;
+        String url = String.format(API_URL, companySlug);
         List<Job> jobs = new ArrayList<>();
 
-        log.info("Scraping Greenhouse jobs for company: {} at URL: {}", companySlug, url);
+        log.info("Scraping Greenhouse jobs for company: {} via API", companySlug);
 
         try {
-            Document doc = Jsoup.connect(url)
-                    .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
-                               "AppleWebKit/537.36 (KHTML, like Gecko) " +
-                               "Chrome/120.0.0.0 Safari/537.36")
-                    .timeout(15000)
-                    .get();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .header("Accept", "application/json")
+                    .GET()
+                    .build();
 
-            // Greenhouse boards typically list openings in <div class="opening">
-            Elements openings = doc.select("div.opening");
+            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
-            for (Element opening : openings) {
-                try {
-                    Element linkElement = opening.selectFirst("a");
-                    if (linkElement == null) continue;
-
-                    String title = linkElement.text().trim();
-                    String jobUrl = linkElement.attr("abs:href");
-
-                    Element locationElement = opening.selectFirst("span.location");
-                    String location = (locationElement != null) ? locationElement.text().trim() : "Not specified";
-
-                    // Attempt to extract experience level from title
-                    String experienceLevel = extractExperienceLevel(title);
-
-                    Job job = Job.builder()
-                            .title(title)
-                            .company(companySlug)
-                            .location(location)
-                            .experienceLevel(experienceLevel)
-                            .jobUrl(jobUrl)
-                            .source(SOURCE)
-                            .scrapedAt(LocalDateTime.now())
-                            .active(true)
-                            .build();
-
-                    if (matchesCriteria(job, filters)) {
-                        jobs.add(job);
-                    }
-                } catch (Exception e) {
-                    log.warn("Error parsing individual job opening: {}", e.getMessage());
-                }
+            if (response.statusCode() != 200) {
+                log.error("Greenhouse API returned status {} for company: {}", response.statusCode(), companySlug);
+                return jobs;
             }
 
-            log.info("Scraped {} jobs from Greenhouse for company: {}", jobs.size(), companySlug);
+            JsonNode root = objectMapper.readTree(response.body());
+            JsonNode jobsArray = root.get("jobs");
 
-        } catch (IOException e) {
-            log.error("Failed to scrape Greenhouse for company {}: {}", companySlug, e.getMessage());
+            if (jobsArray == null || !jobsArray.isArray()) {
+                log.warn("No jobs array found for company: {}", companySlug);
+                return jobs;
+            }
+
+            for (JsonNode jobNode : jobsArray) {
+                try {
+                    String title = getText(jobNode, "title");
+                    String jobUrl = getText(jobNode, "absolute_url");
+                    String location = "Not specified";
+                    JsonNode locNode = jobNode.get("location");
+                    if (locNode != null) {
+                        String locName = getText(locNode, "name");
+                        if (locName != null && !locName.isBlank()) location = locName;
+                    }
+                    String description = null;
+                    String contentHtml = getText(jobNode, "content");
+                    if (contentHtml != null) {
+                        description = contentHtml.replaceAll("<[^>]*>", " ").replaceAll("\\s+", " ").trim();
+                        if (description.length() > 5000) description = description.substring(0, 5000);
+                    }
+                    String experienceLevel = extractLevel(title);
+
+                    Job job = Job.builder()
+                            .title(title).company(companySlug).location(location)
+                            .experienceLevel(experienceLevel).jobUrl(jobUrl)
+                            .description(description).source(SOURCE)
+                            .scrapedAt(LocalDateTime.now()).active(true).build();
+
+                    if (matchesCriteria(job, filters)) jobs.add(job);
+                } catch (Exception e) {
+                    log.warn("Error parsing job: {}", e.getMessage());
+                }
+            }
+            log.info("Scraped {} jobs from Greenhouse for: {}", jobs.size(), companySlug);
+        } catch (IOException | InterruptedException e) {
+            log.error("Failed to scrape Greenhouse for {}: {}", companySlug, e.getMessage());
+            Thread.currentThread().interrupt();
         }
-
         return jobs;
     }
 
-    /**
-     * Attempts to extract experience level from the job title.
-     */
-    private String extractExperienceLevel(String title) {
-        String lower = title.toLowerCase();
-        if (lower.contains("intern")) return "Intern";
-        if (lower.contains("junior") || lower.contains("jr") || lower.contains("entry")) return "Junior";
-        if (lower.contains("mid") || lower.contains("intermediate")) return "Mid";
-        if (lower.contains("senior") || lower.contains("sr")) return "Senior";
-        if (lower.contains("staff")) return "Staff";
-        if (lower.contains("principal")) return "Principal";
-        if (lower.contains("lead")) return "Lead";
-        if (lower.contains("manager") || lower.contains("director")) return "Manager";
+    private String extractLevel(String title) {
+        if (title == null) return "Not specified";
+        String l = title.toLowerCase();
+        if (l.contains("intern")) return "Intern";
+        if (l.contains("junior") || l.contains("jr")) return "Junior";
+        if (l.contains("senior") || l.contains("sr")) return "Senior";
+        if (l.contains("staff")) return "Staff";
+        if (l.contains("principal")) return "Principal";
+        if (l.contains("lead")) return "Lead";
+        if (l.contains("manager") || l.contains("director")) return "Manager";
         return "Not specified";
+    }
+
+    private String getText(JsonNode node, String field) {
+        JsonNode f = node.get(field);
+        return (f != null && !f.isNull()) ? f.asText() : null;
     }
 }

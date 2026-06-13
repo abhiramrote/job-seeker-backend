@@ -34,7 +34,7 @@ public class JobResponseDTO {
                 .source(job.getSource())
                 .matchScore(job.getMatchScore())
                 .scrapedAt(job.getScrapedAt())
-                .active(job.isActive())
+                .active(Boolean.TRUE.equals(job.getActive()))
                 .build();
     }
 }

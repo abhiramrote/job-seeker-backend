@@ -1,0 +1,17 @@
+# Java / Maven
+target/
+*.log
+
+# Runtime outputs
+jobs.csv
+scrape-output.json
+priority-output.json
+
+# Accidental command/file artifacts
+dk install java*
+
+# Angular / Node
+node_modules/
+dist/
+.angular/
+npm-debug.log

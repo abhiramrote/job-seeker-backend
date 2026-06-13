@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: ''
+  apiBaseUrl: 'https://YOUR_BACKEND_URL/api/personal'
 };
