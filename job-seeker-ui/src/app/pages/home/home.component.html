@@ -1,0 +1,17 @@
+<div class="container page-content">
+  <div class="hero fade-in">
+    <h1 class="hero-title">Find Your <span class="highlight">Dream Job</span></h1>
+    <p class="hero-subtitle">
+      Aggregating jobs from top company portals. Search across {{ allJobs.length }}+ positions.
+    </p>
+  </div>
+
+  <app-search-bar (filterChanged)="onFilterChanged($event)"></app-search-bar>
+  <app-stats-bar [jobs]="allJobs"></app-stats-bar>
+
+  <div class="results-header" *ngIf="!loading">
+    <h2>{{ filteredJobs.length }} Jobs Found</h2>
+  </div>
+
+  <app-job-list [jobs]="filteredJobs" [loading]="loading"></app-job-list>
+</div>

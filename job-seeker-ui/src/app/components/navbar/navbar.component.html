@@ -1,0 +1,23 @@
+<nav class="navbar">
+  <div class="navbar-content container">
+    <a routerLink="/" class="logo">
+      <i class="fas fa-briefcase"></i>
+      <span class="logo-text">Job<span class="highlight">Seeker</span></span>
+    </a>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline" (click)="exportCsv()" title="Export CSV">
+        <i class="fas fa-file-csv"></i>
+        <span class="btn-label">CSV</span>
+      </button>
+      <button class="btn btn-outline" (click)="exportExcel()" title="Export Excel">
+        <i class="fas fa-file-excel"></i>
+        <span class="btn-label">Excel</span>
+      </button>
+      <button class="btn btn-primary" (click)="scrapeJobs()" [disabled]="isScraping">
+        <i class="fas" [ngClass]="isScraping ? 'fa-spinner fa-spin' : 'fa-radar'"></i>
+        {{ isScraping ? 'Scraping...' : 'Scrape Jobs' }}
+      </button>
+    </div>
+  </div>
+</nav>
