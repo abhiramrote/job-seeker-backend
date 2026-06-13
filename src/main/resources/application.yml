@@ -1,12 +1,12 @@
 server:
-  port: 8080
+  port: ${PORT:8080}
 app:
-  public-url: https://improved-space-succotash-9r7qqvwr69whpjvx-8080.app.github.dev
+  public-url: ${APP_PUBLIC_URL:http://localhost:8080}
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/jobseeker_db
-    username: postgres
-    password: postgres123
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/jobseeker_db}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres123}
     driver-class-name: org.postgresql.Driver
   devtools:
     restart:
