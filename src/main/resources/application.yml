@@ -1,0 +1,72 @@
+# ============================================================
+# Job Seeker Backend - Application Configuration
+# ============================================================
+
+server:
+  port: 8080
+
+# ---- Database Configuration ----
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jobseeker_db
+    username: postgres
+    password: your_password_here
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  # ---- Email Configuration ----
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: your_email@gmail.com
+    password: your_app_password_here
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+# ---- Azure OpenAI Configuration ----
+azure:
+  openai:
+    endpoint: https://your-resource.openai.azure.com
+    api-key: your_azure_openai_api_key_here
+    deployment-name: gpt-4o
+    api-version: 2024-02-01
+
+# ---- Scraper Configuration ----
+# Add company slugs for each portal you want to scrape
+scraper:
+  target-companies:
+    greenhouse:
+      - airbnb
+      - spotify
+      - figma
+      - notion
+    lever:
+      - netflix
+      - databricks
+      - coinbase
+    workday: []
+
+# ---- Logging ----
+logging:
+  level:
+    com.jobseeker: INFO
+    org.hibernate.SQL: WARN
+
+# ---- Swagger / OpenAPI ----
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
