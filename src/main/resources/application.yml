@@ -110,8 +110,6 @@ twilio:
   auth-token: ${TWILIO_AUTH_TOKEN:}
   from-whatsapp: ${TWILIO_FROM_WHATSAPP:}
   to-whatsapp: ${TWILIO_TO_WHATSAPP:}
-
-
 azure:
   openai:
     endpoint: https://your-resource.openai.azure.com
